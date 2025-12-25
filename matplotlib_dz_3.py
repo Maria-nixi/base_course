@@ -10,12 +10,12 @@ def circle_plotter(R=10):
     # Переход к неявнозаданным координатам
     X, Y = np.meshgrid(x, y)
 
-    fxy = X**2 + Y**2 - R**2  # Уравнение окружности
+    fxy = (X**2 / R**2) + (Y**2 / R**2) # Уравнение окружности
 
     # Команда рисования
     plt.contour(X, Y, fxy, levels=[0])
     # plt.axis('equal')
-    plt.title('Task3')
+    plt.title('Эллипс')
     plt.savefig('fig_dz_3.png')
 
 
