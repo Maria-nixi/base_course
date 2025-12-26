@@ -3,7 +3,7 @@ import numpy as np
 
 
 def circle_plotter(a,b):
-
+  
     x = np.arange(-1.1*a, 1.1*a, 0.01)
     y = np.arange(-1.1*a, 1.1*a, 0.01)
 
