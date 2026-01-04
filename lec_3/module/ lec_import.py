@@ -1,7 +1,7 @@
 # Модуль lec_import.py
 
 # Инструкция, целиком загружающая модуль
-import lec.module.lec_3_my_module as lec_3_my_module
+import lec_3.module.lec_3_my_module as lec_3_my_module
 
 print(lec_3_my_module.a)
 
