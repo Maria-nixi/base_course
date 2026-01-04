@@ -12,7 +12,7 @@ y = r * np.sin(phi)
 
 plt.plot(x, y)
 plt.axis('equal')
-plt.savefig('fig_dz_4.1.png')
+plt.savefig('Task_4.1.png')
 
 plt.close()
 k = 0.4
@@ -25,7 +25,7 @@ y = r * np.sin(phi)
 
 plt.plot(x, y)
 plt.axis('equal')
-plt.savefig('fig_dz_4.2.png')
+plt.savefig('Task4_.2.png')
 
 plt.close()
 
@@ -39,7 +39,7 @@ y = r * np.sin(phi)
 
 plt.plot(x, y)
 plt.axis('equal')
-plt.savefig('fig_dz_4.3.png')
+plt.savefig('Task_4.3.png')
 
 plt.close()
 
@@ -54,4 +54,4 @@ y = r * np.sin(phi)
 
 plt.plot(x, y)
 plt.axis('equal')
-plt.savefig('fig_dz_4.4.png')
+plt.savefig('Task_4.4.png')

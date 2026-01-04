@@ -7,5 +7,5 @@ def no(A=1,a=1,b=6,B=1):
 
     plt.plot(x,y)
     plt.axis('equal')
-    plt.savefig('dop_1.png')
-no()
+    plt.savefig('add_Task_1.png')
+

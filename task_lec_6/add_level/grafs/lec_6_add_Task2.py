@@ -3,7 +3,7 @@ import numpy as np
 
 
 def circle_plotter(a,b):
-
+  
     x = np.arange(-1.1*a, 1.1*a, 0.01)
     y = np.arange(-1.1*a, 1.1*a, 0.01)
 
@@ -14,7 +14,7 @@ def circle_plotter(a,b):
     plt.contour(x, y, fxy, levels=[0])
     plt.axis('equal')
     plt.title('Эллипсик')
-    plt.savefig('fig_dz_3.png')
+    plt.savefig('add_Task_2.png')
 
 
 if __name__ == '__main__':
