@@ -10,8 +10,8 @@ i = 1
 j = 1
 trigonometry_array = np.zeros((N, M))
 trigonometry_array[i, j] = np.sin(N * i + M * j + 1)
-
-for elem trigonometry_array[i, j]:
-    if elem <= 0:
-        elem = 0
 print(trigonometry_array)
+
+for elem in trigonometry_array:
+    if elem < 0:
+        elem = 0
