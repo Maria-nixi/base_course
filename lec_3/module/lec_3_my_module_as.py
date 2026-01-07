@@ -1,5 +1,5 @@
 # Создание псевдонима для имени модуля
-import lec.module.lec_3_my_module as mm
+import lec_3_my_module as mm
 
 print(mm.a)
 
