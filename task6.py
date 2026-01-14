@@ -1,0 +1,12 @@
+sp = []
+a = input("Введите ваш возраст: ")
+b = input("Введите ваш пол: ")
+c = input("Введите ваше имя: ")
+d = input("Введите ваш город: ")
+e = input("Введите в каком вы классе: ")
+sp.append(a)
+sp.append(b)
+sp.append(c)
+sp.append(d)
+sp.append(e)
+print(sp)
