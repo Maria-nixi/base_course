@@ -2,7 +2,7 @@ import numpy as np
 from scipy import interpolate
 import matplotlib.pyplot as plt
 
-img = plt.imread("Barnard_68_nebula.jpg")
+img = plt.imread("stage_2/Barnard_68_nebula.jpg")
 fig, ax = plt.subplots()
 ax.imshow(img, extent=[0, 640, 0, 640])
 

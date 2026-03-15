@@ -13,6 +13,7 @@ def circle(R, x0, y0, starst, stop, step):
     return x, y
 
 
+
 plt.plot([230, 240], [420, 290], lw=2, color='w')
 plt.savefig('slide_2_paint_image.png')
 

@@ -13,13 +13,11 @@ def circle(R, x0, y0, starst, stop, step):
     return x, y
 
 
-plt.plot([41, 10], [210, 180], lw=2, color='w')
-plt.savefig('slide_2_paint_image.png')
-
 plt.plot([142, 139], [380, 373], lw=2, color='w')
 plt.savefig('slide_2_paint_image.png')
 
-coords = circle(40, 35, 150, np.pi/2+np.pi/4, 3*np.pi/2, 0.1)
+
+coords = circle(54, 68, 162, np.pi/2+np.pi/7, 3*np.pi/2.2, 0.1)
 plt.plot(coords[0], coords[1], lw=2, color='w')
 plt.savefig('slide_2_paint_image.png')
 
@@ -58,7 +56,7 @@ coords = circle(70, 220, 115, np.pi+np.pi/6, 2*np.pi-np.pi/3.5, 0.1)
 plt.plot(coords[0], coords[1], lw=2, color='w')
 plt.savefig('slide_2_paint_image.png')
 
-coords = circle(82, 108, 149, np.pi+np.pi/6, 2*np.pi-np.pi/3.8, 0.1)
+coords = circle(85, 117, 155, np.pi+np.pi/6, 2*np.pi-np.pi/3, 0.1)
 plt.plot(coords[0], coords[1], lw=2, color='w')
 plt.savefig('slide_2_paint_image.png')
 
