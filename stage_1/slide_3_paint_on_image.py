@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-img = plt.imread("Barnard_68_nebula.jpg")
+img = plt.imread("stage_1/Barnard_68_nebula.jpg")
 fig, ax = plt.subplots()
 ax.imshow(img, extent=[0, 640, 0, 640])
 
@@ -19,7 +19,7 @@ plt.savefig('slide_2_paint_image.png')
 plt.plot([240, 150], [290, 230], lw=2, color='w')
 plt.savefig('slide_2_paint_image.png')
 
-coords = circle(35, 180, 210, np.pi/2+np.pi/4, 3*np.pi/2, 0.1)
+coords = circle(50, 180, 280, np.pi/2+np.pi/4, 3*np.pi/2, 0.1)
 plt.plot(coords[0], coords[1], lw=2, color='w')
 plt.savefig('slide_2_paint_image.png')
 

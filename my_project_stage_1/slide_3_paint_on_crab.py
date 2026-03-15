@@ -1,0 +1,79 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+img = plt.imread("my_project_stage_1/crab_nebula.jpg")
+fig, ax = plt.subplots()
+ax.imshow(img, extent=[0, 640, 0, 640])
+
+
+def circle(R, x0, y0, starst, stop, step):
+    t=np.arange(starst, stop, step)
+    x = x0 + R * np.cos(t)
+    y = y0 + R * np.sin(t)
+    return x, y
+
+
+plt.plot([41, 10], [210, 180], lw=2, color='w')
+plt.savefig('slide_2_paint_image.png')
+
+plt.plot([142, 139], [380, 373], lw=2, color='w')
+plt.savefig('slide_2_paint_image.png')
+
+coords = circle(40, 35, 150, np.pi/2+np.pi/4, 3*np.pi/2, 0.1)
+plt.plot(coords[0], coords[1], lw=2, color='w')
+plt.savefig('slide_2_paint_image.png')
+
+coords = circle(37, 50, 250, np.pi/3+np.pi/4, 3*np.pi/2, 0.1)
+plt.plot(coords[0], coords[1], lw=2, color='w')
+plt.savefig('slide_2_paint_image.png')
+
+coords = circle(90, 180, 280, np.pi/np.pi+0.5, 2*np.pi-np.pi/1.01, 0.1)
+plt.plot(coords[0] - 50, coords[1] + 5, lw=2, color='w')
+plt.savefig('slide_2_paint_image.png')
+
+coords = circle(50, 230, 410, np.pi/np.pi+0.01, 2*np.pi-np.pi/1.3, 0.1)
+plt.plot(coords[0] - 50, coords[1] + 5, lw=2, color='w')
+plt.savefig('slide_2_paint_image.png')
+
+
+coords = circle(55, 315, 450, np.pi/np.pi+0.05, 2*np.pi-np.pi/1.05, 0.1)
+plt.plot(coords[0] - 50, coords[1] + 5, lw=2, color='w')
+plt.savefig('slide_2_paint_image.png')
+
+coords = circle(55, 400, 500, np.pi/np.pi+0.05, 2*np.pi-np.pi/1.05, 0.1)
+plt.plot(coords[0] - 50, coords[1] + 5, lw=2, color='w')
+plt.savefig('slide_2_paint_image.png')
+
+
+coords = circle(140, 458, 440, 2*np.pi-np.pi/5, 2*np.pi+np.pi/1.4, 0.1)
+plt.plot(coords[0], coords[1], lw=2, color='w')
+plt.savefig('slide_2_paint_image.png')
+
+coords = circle(70, 522, 310, 2*np.pi-np.pi/3, 2*np.pi+np.pi/4, 0.1)
+plt.plot(coords[0], coords[1], lw=2, color='w')
+plt.savefig('slide_2_paint_image.png')
+
+
+coords = circle(70, 220, 115, np.pi+np.pi/6, 2*np.pi-np.pi/3.5, 0.1)
+plt.plot(coords[0], coords[1], lw=2, color='w')
+plt.savefig('slide_2_paint_image.png')
+
+coords = circle(82, 108, 149, np.pi+np.pi/6, 2*np.pi-np.pi/3.8, 0.1)
+plt.plot(coords[0], coords[1], lw=2, color='w')
+plt.savefig('slide_2_paint_image.png')
+
+coords = circle(45, 300, 90, np.pi+np.pi/5, 2*np.pi-np.pi/20, 0.1)
+plt.plot(coords[0], coords[1], lw=2, color='w')
+plt.savefig('slide_2_paint_image.png')
+
+coords = circle(45, 380, 108, np.pi+np.pi/4.5, 2*np.pi+np.pi/8, 0.1)
+plt.plot(coords[0], coords[1], lw=2, color='w')
+plt.savefig('slide_2_paint_image.png')
+
+coords = circle(90, 487, 188, np.pi+np.pi/4.5, 2*np.pi+np.pi/4, 0.1)
+plt.plot(coords[0], coords[1], lw=2, color='w')
+plt.savefig('slide_2_paint_image.png')
+
+
+
+
