@@ -13,13 +13,13 @@ def circle(R, x0, y0, starst, stop, step):
     return x, y
 
 
-plt.plot([142, 139], [380, 373], lw=2, color='w')
-plt.savefig('slide_2_paint_image.png')
+# plt.plot([142, 139], [380, 373], lw=2, color='w')
+# plt.savefig('slide_2_paint_image.png')
 
 
-coords = circle(54, 68, 162, np.pi/2+np.pi/7, 3*np.pi/2.2, 0.1)
-plt.plot(coords[0], coords[1], lw=2, color='w')
-plt.savefig('slide_2_paint_image.png')
+# coords = circle(54, 68, 162, np.pi/2+np.pi/7, 3*np.pi/2.2, 0.1)
+# plt.plot(coords[0], coords[1], lw=2, color='w')
+# plt.savefig('slide_2_paint_image.png')
 
 coords = circle(37, 50, 250, np.pi/3+np.pi/4, 3*np.pi/2, 0.1)
 plt.plot(coords[0], coords[1], lw=2, color='w')
@@ -29,27 +29,27 @@ coords = circle(90, 180, 280, np.pi/np.pi+0.5, 2*np.pi-np.pi/1.01, 0.1)
 plt.plot(coords[0] - 50, coords[1] + 5, lw=2, color='w')
 plt.savefig('slide_2_paint_image.png')
 
-coords = circle(50, 230, 410, np.pi/np.pi+0.01, 2*np.pi-np.pi/1.3, 0.1)
-plt.plot(coords[0] - 50, coords[1] + 5, lw=2, color='w')
-plt.savefig('slide_2_paint_image.png')
+# coords = circle(50, 230, 410, np.pi/np.pi+0.01, 2*np.pi-np.pi/1.3, 0.1)
+# plt.plot(coords[0] - 50, coords[1] + 5, lw=2, color='w')
+# plt.savefig('slide_2_paint_image.png')
 
 
-coords = circle(55, 315, 450, np.pi/np.pi+0.05, 2*np.pi-np.pi/1.05, 0.1)
-plt.plot(coords[0] - 50, coords[1] + 5, lw=2, color='w')
-plt.savefig('slide_2_paint_image.png')
+# coords = circle(55, 315, 450, np.pi/np.pi+0.05, 2*np.pi-np.pi/1.05, 0.1)
+# plt.plot(coords[0] - 50, coords[1] + 5, lw=2, color='w')
+# plt.savefig('slide_2_paint_image.png')
 
-coords = circle(55, 400, 500, np.pi/np.pi+0.05, 2*np.pi-np.pi/1.05, 0.1)
-plt.plot(coords[0] - 50, coords[1] + 5, lw=2, color='w')
-plt.savefig('slide_2_paint_image.png')
+# coords = circle(55, 400, 500, np.pi/np.pi+0.05, 2*np.pi-np.pi/1.05, 0.1)
+# plt.plot(coords[0] - 50, coords[1] + 5, lw=2, color='w')
+# plt.savefig('slide_2_paint_image.png')
 
 
 coords = circle(140, 458, 440, 2*np.pi-np.pi/5, 2*np.pi+np.pi/1.4, 0.1)
 plt.plot(coords[0], coords[1], lw=2, color='w')
 plt.savefig('slide_2_paint_image.png')
 
-coords = circle(70, 522, 310, 2*np.pi-np.pi/3, 2*np.pi+np.pi/4, 0.1)
-plt.plot(coords[0], coords[1], lw=2, color='w')
-plt.savefig('slide_2_paint_image.png')
+# coords = circle(70, 522, 310, 2*np.pi-np.pi/3, 2*np.pi+np.pi/4, 0.1)
+# plt.plot(coords[0], coords[1], lw=2, color='w')
+# plt.savefig('slide_2_paint_image.png')
 
 
 coords = circle(70, 220, 115, np.pi+np.pi/6, 2*np.pi-np.pi/3.5, 0.1)
