@@ -1,9 +1,9 @@
 import numpy as np
 from scipy import interpolate
 import matplotlib.pyplot as plt
+import shapely.geometry as geom
 
-img = plt.imread("my_project_stage_2/crab_nebula.jpg")
-
+img = plt.imread("my_project_stage_3/crab_nebula.jpg")
 fig, ax = plt.subplots()
 ax.imshow(img, extent=[0, 640, 0, 640])
 
@@ -15,7 +15,6 @@ def circle(R, x0, y0, starst, stop, step):
 
 x = np.array([])
 y = np.array([])
-
 
 x = np.append(x, [142, 139])
 y = np.append(y, [380, 373])
@@ -77,7 +76,23 @@ y = np.append(y, coords[1])
 spline_coords, figure_spline_part = interpolate.splprep([x, y], s=0)
 spline_curve = interpolate.splev(np.linspace(0, 1, 100), spline_coords)
 
-plt.plot(x, y, 'bo')
 
-plt.savefig('slide_3_spline_crab_nebula.png')
-plt.show()
+curve_coords = []
+for i in range(len(spline_curve[0])):
+    curve_coords.append([spline_curve[0][i], spline_curve[1][i]])
+
+polygon = geom.Polygon(curve_coords)
+points_numper_per_side = 100
+x_pictures_limits = [0, 640]
+y_pictures_limits = [0, 640]
+
+for x_point_coord in np.linspace(*x_pictures_limits, points_numper_per_side):
+    for y_point_coord in np.linspace(*y_pictures_limits, points_numper_per_side):
+        p = geom.Point(x_point_coord, y_point_coord)
+        if p.within(polygon):
+            plt.plot(x_point_coord, y_point_coord, 'go', ms=0.7)
+
+plt.plot(x, y, 'bo')
+plt.plot(spline_curve[0], spline_curve[1], 'g')
+
+plt.savefig('crab_nebula.png')

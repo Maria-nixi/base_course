@@ -3,13 +3,12 @@ from scipy import interpolate
 import matplotlib.pyplot as plt
 import shapely.geometry as geom
 
-phi = np.linspace(0, 2*np.pi, 40)
-r = 0.5 + np.cos(phi)
-x = r * np.cos(phi)
-y = r * np.sin(phi)
+fig, ax = plt.subplots()
 
 x = np.array([1, 1, 10, 10, 1])
 y = np.array([1, 5, 5, 1, 1])
+ax.plot(x, y, '-', linewidth=2, color='k')
+
 
 spline_coords, figure_spline_part = interpolate.splprep([x, y], s=0)
 spline_curve = interpolate.splev(figure_spline_part, spline_coords)
@@ -20,8 +19,8 @@ for i in range(len(spline_curve[0])):
 
 polygon = geom.Polygon(curve_coords)
 points_numper_per_side = 300
-x_pictures_limits = [-1, 11]
-y_pictures_limits = [-1, 6]
+x_pictures_limits = [-0.5, 2]
+y_pictures_limits = [-1, 1]
 
 for x_point_coord in np.linspace(*x_pictures_limits, points_numper_per_side):
     for y_point_coord in np.linspace(*y_pictures_limits, points_numper_per_side):
@@ -33,4 +32,4 @@ plt.plot(x, y, 'bo')
 plt.plot(spline_curve[0], spline_curve[1], 'g')
 
 plt.axis('equal')
-plt.savefig('slide_1_point_in_poligon.png')
+plt.savefig('home_slide_1_point_in_poligon.png')
