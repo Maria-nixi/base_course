@@ -125,8 +125,16 @@ coords = circle(30, 430, 210, np.pi+np.pi/4.5, 2*np.pi+np.pi/8, 0.1)
 plt.plot(coords[0], coords[1], lw=2, color='w')
 plt.savefig('slide_2_paint_image.png')
 
-
-
-coords = circle(45, 460, 292, np.pi/3+np.pi/4.5, 3*np.pi/2.2, 0.1)
+coords = circle(45, 475, 295, np.pi/3+np.pi/4.5, 3*np.pi/2.2, 0.1)
 plt.plot(coords[0], coords[1], lw=2, color='w')
+plt.savefig('slide_2_paint_image.png')
+
+coords = circle(20, 423, 200, np.pi/np.pi-0.4, 2*np.pi-np.pi/1, 0.1)
+plt.plot(coords[0] - 50, coords[1] + 5, lw=2, color='w')
+plt.savefig('slide_2_paint_image.png')
+
+plt.plot([393, 410], [213, 190], lw=2, color='w')
+plt.savefig('slide_2_paint_image.png')
+
+plt.plot([455, 459], [254, 210], lw=2, color='w')
 plt.savefig('slide_2_paint_image.png')
