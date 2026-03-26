@@ -3,7 +3,7 @@ from scipy import interpolate
 import matplotlib.pyplot as plt
 import shapely.geometry as geom
 
-img = plt.imread("my_project_stage_3/crab_nebula.jpg")
+img = plt.imread("crab_nebula.jpg")
 fig, ax = plt.subplots()
 ax.imshow(img, extent=[0, 640, 0, 640])
 
@@ -13,8 +13,10 @@ def circle(R, x0, y0, starst, stop, step):
     y = y0 + R * np.sin(t)
     return x, y
 
+
 x = np.array([])
 y = np.array([])
+
 
 x = np.append(x, [142, 139])
 y = np.append(y, [380, 373])
@@ -95,4 +97,4 @@ for x_point_coord in np.linspace(*x_pictures_limits, points_numper_per_side):
 plt.plot(x, y, 'bo')
 plt.plot(spline_curve[0], spline_curve[1], 'g')
 
-plt.savefig('crab_nebula.png')
+plt.savefig('crab_nebula_3.png')

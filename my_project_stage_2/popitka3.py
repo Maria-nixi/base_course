@@ -3,7 +3,6 @@ from scipy import interpolate
 import matplotlib.pyplot as plt
 
 img = plt.imread("my_project_stage_2/crab_nebula.jpg")
-
 fig, ax = plt.subplots()
 ax.imshow(img, extent=[0, 640, 0, 640])
 
