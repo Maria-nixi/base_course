@@ -60,10 +60,6 @@ x = np.append(x, coords[0] - 50)
 y = np.append(y, coords[1] + 5)
 
 
-
-
-
-
 coords = circle(50, 230, 410, np.pi/np.pi+0.01, 2*np.pi-np.pi/1.3, 0.1)
 x = np.append(x, coords[0] - 50)
 y = np.append(y, coords[1] + 5)
@@ -116,6 +112,3 @@ plt.title('Векторное поле скоростей, v = {y/r, x/r} м/с'
 plt.ylabel('Координата Х, м')
 plt.xlabel('Координата Y, м')
 plt.savefig("vector_field_2.png")
-
-
-
