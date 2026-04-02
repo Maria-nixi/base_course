@@ -104,7 +104,7 @@ plt.close()
 x = np.array(x_gas)
 y = np.array(y_gas)
 
-u = x / np.sqrt(x**2 + y**2) + 200
+u = x / np.sqrt(x**2 + y**2) + 800
 v = y / np.sqrt(x**2 + y**2) 
 print(u)
 plt.quiver(x, y, u, v, angles='xy', scale_units='xy')
