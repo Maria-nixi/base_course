@@ -73,42 +73,63 @@ x = np.append(x, coords[0])
 y = np.append(y, coords[1])
 
 spline_coords, figure_spline_part = interpolate.splprep([x, y], s=0)
-spline_curve = interpolate.splev(np.linspace(0, 1, 100), spline_coords)
-
+spline_curve = interpolate.splev(figure_spline_part, spline_coords)
 
 curve_coords = []
 for i in range(len(spline_curve[0])):
     curve_coords.append([spline_curve[0][i], spline_curve[1][i]])
 
 polygon = geom.Polygon(curve_coords)
-points_numper_per_side = 100
+points_numper= 10000
 x_pictures_limits = [0, 640]
 y_pictures_limits = [0, 640]
 
-x_gas, y_gas = [], []
+
+def density(x, y, x0=340, y0=300, intensity=[0.00001, 0.000001]):  
+        return np.exp(- intensity[0] * (x - x0)**2 - intensity[1] * (y - y0)**2)
 
 
-for x_point_coord in np.linspace(*x_pictures_limits, points_numper_per_side):
-    for y_point_coord in np.linspace(*y_pictures_limits, points_numper_per_side):
+def points_generator(x0=0, y0=0, points_numper=10000000, intensity=[0.00001, 0.000001]):
+    points_counter = 0
+
+    while points_counter < points_numper:
+        x_point_coord = np.random.uniform(0, 640)
+        y_point_coord = np.random.uniform(0, 640)
+        
         p = geom.Point(x_point_coord, y_point_coord)
-        if p.within(polygon):
-            x_gas.append(x_point_coord)
-            y_gas.append(y_point_coord)
-            plt.plot(x_point_coord, y_point_coord, 'go', ms=0.7)
+        w = np.random.uniform(0.0, 1.0)
 
-plt.plot(x, y, 'bo')
-plt.plot(spline_curve[0], spline_curve[1], 'g')
-plt.savefig('crab_nebula_3.png')
+        if w <= density(x_point_coord, y_point_coord, x0, y0, intensity) and p.within(polygon):
+            points_coords.append(x_point_coord)
+            points_coords.append(y_point_coord)
+            points_counter += 1
+
+
+points_coords = []
+points_generator(0.8, 0, 5000, [5, 5])
+points_generator(0.8, 0.8, 5000, [5, 5])
+
+# Коэффициент отображения координат в расстояние [0, 1] (максимальное расстояние в координатах)
+normal_dimention = 2.5 
+box_size =  1
+
+# Центрирование объекта
+x_p = np.array(points_coords[0::2]) / normal_dimention + box_size / 2
+y_p = np.array(points_coords[1::2]) / normal_dimention + box_size / 2
+
+plt.plot(x_p, y_p, 'go', ms=0.5)
+plt.axis('equal')
+plt.savefig('slide_2_normalize_size.png')
 plt.close()
 
-x = np.array(x_gas)
-y = np.array(y_gas)
+# Учет реальных размеров объекта в парсеках
+real_size = 1.7 # Размер туманности Ориона в парсеках
 
-u = x / np.sqrt(x**2 + y**2) + 800
-v = y / np.sqrt(x**2 + y**2) 
-print(u)
-plt.quiver(x, y, u, v, angles='xy', scale_units='xy')
-plt.title('Векторное поле скоростей, v = {y/r, x/r} м/с')
-plt.ylabel('Координата Х, м')
-plt.xlabel('Координата Y, м')
-plt.savefig("vector_field_5.png")
+box_size = real_size * box_size
+x_p = x_p * real_size
+y_p = y_p * real_size
+
+plt.plot(x_p, y_p, 'go', ms=0.5)
+plt.axis('equal')
+plt.savefig('slide_2_normalize_size.png')
+plt.close()
