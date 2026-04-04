@@ -98,7 +98,6 @@ for x_point_coord in np.linspace(*x_pictures_limits, points_numper_per_side):
 
 plt.plot(x, y, 'bo')
 plt.plot(spline_curve[0], spline_curve[1], 'g')
-plt.savefig('crab_nebula_3.png')
 plt.close()
 
 x = np.array(x_gas)
