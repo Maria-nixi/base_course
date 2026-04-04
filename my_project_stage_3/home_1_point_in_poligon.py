@@ -35,4 +35,4 @@ plt.plot(x, y, 'bo')
 plt.plot(spline_curve[0], spline_curve[1], 'g')
 
 plt.axis('equal')
-plt.savefig('slide_1_poi_home.png')
+plt.savefig('slide_1_home.png')

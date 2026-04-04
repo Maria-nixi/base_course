@@ -98,20 +98,8 @@ for x_point_coord in np.linspace(*x_pictures_limits, points_numper_per_side):
 
 plt.plot(x, y, 'bo')
 plt.plot(spline_curve[0], spline_curve[1], 'g')
-plt.savefig('crab_nebula_3.png')
-plt.close()
+plt.savefig('slide_3_crab_nebula_point.png')
 
-x = np.array(x_gas)
-y = np.array(y_gas)
-
-u = x / np.sqrt(x**2 + y**2) + 200
-v = y / np.sqrt(x**2 + y**2) 
-print(u)
-plt.quiver(x, y, u, v, angles='xy', scale_units='xy')
-plt.title('Векторное поле скоростей, v = {y/r, x/r} м/с')
-plt.ylabel('Координата Х, м')
-plt.xlabel('Координата Y, м')
-plt.savefig("vector_field_2.png")
 
 
 

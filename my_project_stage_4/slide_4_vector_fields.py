@@ -9,5 +9,5 @@ plt.quiver(x, y, u, v, angles='xy', scale_units='xy')
 plt.title('Векторное поле скоростей, v = {y/r, x/r} м/с')
 plt.ylabel('Координата Х, м')
 plt.xlabel('Координата Y, м')
-plt.savefig("ield_2.png")
+plt.savefig("vector_fields.png")
 

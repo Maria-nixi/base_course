@@ -2,18 +2,15 @@ import numpy as np
 from scipy import interpolate
 import matplotlib.pyplot as plt
 
-
-img = plt.imread("my_project_stage_2/crab_nebula.jpg")
+img = plt.imread("crab_nebula.jpg")
 fig, ax = plt.subplots()
 ax.imshow(img, extent=[0, 640, 0, 640])
 
-
 def circle(R, x0, y0, starst, stop, step):
-    t=np.arange(starst, stop, step)
+    t = np.arange(starst, stop, step)
     x = x0 + R * np.cos(t)
     y = y0 + R * np.sin(t)
     return x, y
-
 
 x = np.array([])
 y = np.array([])
@@ -32,8 +29,8 @@ x = np.append(x, coords[0])
 y = np.append(y, coords[1])
 
 coords = circle(90, 180, 280, np.pi/np.pi+0.5, 2*np.pi-np.pi/1.01, 0.1)
-x = np.append(x, coords[0] - 50)
-y = np.append(y, coords[1] + 5)
+x = np.append(x, coords[0] - 50) 
+y = np.append(y, coords[1] + 5)  
 
 coords = circle(50, 230, 410, np.pi/np.pi+0.01, 2*np.pi-np.pi/1.3, 0.1)
 x = np.append(x, coords[0] - 50)
@@ -77,10 +74,9 @@ y = np.append(y, coords[1])
 
 
 spline_coords, figure_spline_part = interpolate.splprep([x, y], s=0)
-spline_curve = interpolate.splev(np.linspace(0, 1, 100), spline_coords) 
+spline_curve = interpolate.splev(np.linspace(0, 1, 100), spline_coords)
 
+plt.plot(x, y, 'bo')
 
-plt.plot(x, y, 'bo') 
-plt.plot(spline_curve[0], spline_curve[1], 'g') 
 plt.savefig('slide_2_spline_crab_nebula.png')
-
+plt.show()
